@@ -1,0 +1,151 @@
+html,
+body {
+    margin: 0 auto;
+    max-width: 1700px;
+    width: 100%;
+    height: 100%;
+}
+
+.container-first {
+    display: grid;
+    height: 100%;
+    gap: 56px;
+    padding: 90px 100px;
+
+    grid-template-rows: 360px 360px 580px;
+    grid-template-columns: 462px 462px 462px;
+    grid-template-areas:
+        "img-big img-big img-1"
+        "img-big img-big img-2"
+        "img-3 img-4 img-5";
+}
+
+.img-big {
+    grid-area: img-big;
+    position: relative;
+    cursor: pointer;
+}
+
+.back::before {
+    content: " ";
+    display: block;
+    background: linear-gradient(to top, rgba(26, 26, 26, 0.36) 0%, transparent 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back:hover:before {
+    background-color: rgba(00, 00, 00, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.back:hover>.icon-back {
+    opacity: 1;
+    transition: all 0.8s ease-in-out
+}
+
+.icon-back {
+    position: absolute;
+    font-size: 100px;
+    color: rgb(223, 18, 86);
+    transition: 1s;
+    opacity: 0;
+    z-index: 5;
+}
+
+
+.img-1 {
+    grid-area: img-1;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.img-2 {
+    grid-area: img-2;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.img-3 {
+    grid-area: img-3;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.img-4 {
+    grid-area: img-4;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.img-5 {
+    grid-area: img-5;
+    position: relative;
+    cursor: pointer;
+}
+
+.container-second {
+    display: grid;
+    width: 100%;
+    gap: 0;
+    margin: 0;
+    grid-template-rows: 424px 424px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.img-second {
+    cursor: pointer;
+    position: relative;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.img:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(00, 00, 00, 0.8);
+    transition: 250ms background-color;
+}
+
+.img:hover:after {
+    background-color: rgba(00, 00, 00, 0.6);
+    transition: all 0.3s ease-in-out;
+}
+
+.img:hover>.icon-second {
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
+}
+
+.icon-second {
+    position: absolute;
+    font-size: 80px;
+    color: rgb(223, 18, 86);
+    transition: 1s;
+    z-index: 2;
+    opacity: 0;
+}
